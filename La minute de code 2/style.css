@@ -1,0 +1,521 @@
+/*
+Theme Name: La minute de code
+Theme URI:  https: //127.0.0.1/laminutedecode
+Author: Jonathan B.
+Author URI: https://www.laminutedecode.com
+Description: Theme "La minute de code" 
+Version: 1.0
+*/
+
+/*  #######################################   GLOBAL */
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  --color-j: #ff9c00;
+  --color-m: #503000;
+  --color-b: #ffffff;
+  --color-d: rgb(12, 12, 12);
+  --texte: 'Roboto', sans-serif;
+  --titre: 'Gemunu Libre', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--texte);
+  position: relative;
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--titre);
+}
+h1 {
+  color: var(--color-b);
+  font-size: calc(25px + 2vw + 10px);
+  text-align: center;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  font-size: calc(23px + 1vw + 5px);
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+p, li, input, textarea {
+  font-size: calc(12px + 0.2vw + 2px);
+}
+a{
+  text-decoration: none;
+  font-size: calc(10px + 0.3vw + 3px);
+  color: var(--color-j);
+  transition: color 0.2s ease-in-out;
+}
+a:hover {
+  color: var(--color-m);
+}
+
+button {
+cursor: pointer;
+ border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.ligne-global {
+  width: 2px;
+  height: 150px;
+  background: var(--color-j);
+  margin: 0 auto;
+  position: relative;
+  transition: height 0.2s ease-in-out;
+}
+.ligne-global::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-j);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+ .btn-global {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  background: var(--color-j);
+  color: var(--color-b);
+  font-weight: 700;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: calc(10px + 0.2vw + 3px);
+  padding: 0 0.5rem;
+ }
+
+ .btn-global::after {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 7px;
+   position: absolute;
+   top: 1rem;
+   left: 150px;
+   background: rgb(255, 255, 255, 0.1);
+   transform: rotate(130deg);
+ }
+
+ .btn-global::before {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 10px;
+   position: absolute;
+   top: 1rem;
+   left: 180px;
+   background: rgba(255, 255, 255, 0.1);
+   transform: rotate(130deg);
+ }
+
+ .btn-global:hover {
+   background: rgba(255, 128, 0, 0.596);
+   color: var(--color-b)
+ }
+
+ .btn-global:hover.btn-global::after {
+   animation: btn-before 1s ease-in-out;
+ }
+
+ .btn-global:hover.btn-global::before {
+   animation: btn-after 1s ease-in-out;
+ }
+
+ @keyframes btn-after {
+   from {
+     left: 300px;
+   }
+
+   to {
+     left: -200px;
+   }
+ }
+
+ @keyframes btn-before {
+   from {
+     left: 250px;
+   }
+
+   to {
+     left: -150px;
+   }
+ }
+
+@media screen and (max-width: 750px) {
+  .ligne-global {
+    height: 150px;
+  }
+  p, li, h4, h5, h6 {
+    text-align: center!important;
+   }
+  p {
+    margin: 0 1rem;
+  }
+}
+
+
+
+/*  #######################################   NAVIGATION */
+
+.navigation {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index: 200;
+}
+
+.navigation.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--color-d);
+  border-bottom: 1px solid var(--color-b);
+  box-shadow: 0 5px 5px rgba(0,0,0,.3)
+}
+
+.navigation-liste {
+  display: flex;
+}
+
+.navigation-item {
+  margin: 0 1rem;
+}
+
+.navigation-item a {
+  color: var(--color-b);
+  font-weight: 700;
+  font-size: calc(15px + 0.5vw - 3px);
+  position: relative;
+}
+
+.navigation-item a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-j);
+  transition: width 0.2s ease-in-out,
+              color 0.2s ease-in-out;
+}
+
+.navigation-item a:hover {
+  color: var(--color-j)
+}
+
+.navigation-item a:hover::after {
+  width: 100%;
+}
+
+/* icone burger */
+.iconBurger {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 300;
+  cursor: pointer;
+  display: none;
+}
+
+.iconBurgerLigne{
+  width: 80%;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--color-b);
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  transition: transform 0.2s ease-in-out,
+              top 0.2s ease-in-out,
+              opacity 0.2s ease-in-out;
+}
+
+.iconBurgerLigne:nth-child(1){
+  top: 0px;
+}
+.iconBurgerLigne:nth-child(2){
+  top: 15px;
+}
+.iconBurgerLigne:nth-child(3){
+  top: 30px;
+}
+
+/* Animation burger */
+
+.iconBurger.active .iconBurgerLigne:nth-child(1){
+  top: 15px;
+  transform: rotate(-130deg);
+}
+.iconBurger.active .iconBurgerLigne:nth-child(2){
+  opacity: 0;
+  transform: translateX(130px);
+}
+.iconBurger.active .iconBurgerLigne:nth-child(3){
+  top: 15px;
+  transform: rotate(130deg);
+}
+
+
+@media screen and (max-width: 750px){
+  .navigation-liste {
+    width: 100%;
+    height: 100vh;
+    background: var(--color-d);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    transition: left 0.2s ease-in-out;
+    z-index: 100;
+  }
+  .navigation-item {
+    margin: 1rem 0;
+  }
+  .navigation-liste.active {
+    left: 0;
+     }
+  .navigation-item a {
+    opacity: 0;
+  }
+  .navigation-liste.active .navigation-item a {
+    transition: opacity 0.2s ease-in-out 0.2s;
+    opacity: 1;
+  }
+  .iconBurger {
+    display: block;
+  }
+}
+
+
+
+/* ############################################# HEADER global*/
+.header-global {
+  height: 50vh;
+  background: linear-gradient(to top, var(--color-j) 50%, var(--color-d) 50%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-global a {
+  color: var(--color-d);
+  margin: 1rem 0;
+}
+
+.header-global a:hover {
+  color: var(--color-b)
+}
+
+/* ############################################# Grille info*/
+.grid-info-container, .grid-info-container-2 {
+  width: 100%;
+  height: auto;
+  background: var(--color-d);
+}
+.grid-info-container {
+  padding: 1rem 0;
+}
+.grid-info-container-2 {
+  padding: 0 10px;
+  padding-bottom: 2rem;
+}
+.grid-info-container, .grid-info-container-2 h2 {
+  color: var(--color-b);
+}
+.grid-info, .grid-info-2 {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  margin: 0 auto;
+}
+.grid-info, .grid-info-2 {
+  margin: 0 auto;
+}
+.grid-info-2 {
+  margin: 3rem auto;
+}
+
+.grid-info-carte {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-b);
+  text-align: center;
+}
+.grid-info-carte a {
+  margin: 1rem 0;
+}
+.grid-info-carte-2 {
+  overflow: hidden;
+  position: relative;
+}
+
+.grid-info-carte iframe {
+  width: 100%;
+  padding: 0 1rem;
+}
+.grid-info-carte img, .grid-info-carte-2 img {
+  width: 100%;
+  height: auto;
+  object-fit: center;
+}
+
+.grid-info-carte-2 img {
+  transition: transform 0.2s ease-in,
+    filter 0.2s ease-in;
+  -webkit-filter: grayscale();
+  filter: grayscale();
+}
+
+.grid-info-carte-2 img:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  filter: none;
+}
+
+.grid-info-carte-titre {
+  color: var(--color-m);
+  font-size: calc(18px + 0.2vw);
+  position: absolute;
+  width: 100%;
+  height: 105px;
+  line-height: 105px;
+  text-align: center;
+  opacity: 0.5;
+  background: rgb(255, 255, 255, 0.8);
+  bottom: -105px;
+  left: 0;
+  pointer-events: none;
+  cursor: default;
+  right: 0;
+  transition: bottom 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+
+}
+
+.grid-info-carte-2:hover .grid-info-carte-titre {
+  bottom: 0;
+  opacity: 1;
+}
+
+
+/* ############################################# Bouton HAUT */
+
+.retourHaut {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  background: var(--color-j);
+  font-size: 50px;
+  z-index: 200;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  line-height: 60px;
+  text-align: center;
+  box-shadow: 0 0 5px 7px rgba(255, 255, 255, 0.2);
+}
+
+.retourHaut i {
+  font-size: 20px;
+  color: var(--color-b);
+}
+
+.retourHaut.active {
+  opacity: 1;
+}
+
+/* ############################################# footer*/
+
+footer {
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+  background: var(--color-d);
+  color: var(--color-b)
+}
+footer hr {
+  border: none;
+  width: 80%;
+  height: 1px;
+  background: var(--color-j);
+  margin: 2rem auto;
+}
+footer img {
+  width: 50px;
+}
+footer h5 {
+  font-size: 25px;
+  margin: 1rem 0;
+}
+.footer-card {
+  width: 250px;
+  height: 100px;
+  margin: 1rem 0;
+  text-align: center;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-reseaux ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-card {
+    text-align: center;
+  }
+}

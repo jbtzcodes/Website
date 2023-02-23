@@ -1,0 +1,14 @@
+{
+  "name": "6.home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/global.scss css/raw/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.1"
+  }
+}

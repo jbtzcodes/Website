@@ -1,0 +1,66 @@
+/* ############################################# contact*/
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-bottom: 3rem;
+  color: var(--color-d);
+}
+
+.contact label {
+  display: block;
+  width: 100%;
+  color: var(--color-m);
+  margin: 1rem 0;
+}
+
+.contact input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-m);
+
+}
+
+.contact input[type="submit"] {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  outline: none;
+  background: var(--color-j);
+  border: none;
+  cursor: pointer;
+  margin: 1rem 0;
+  border-radius: 15px;
+  color: var(--color-b);
+  transition: background 0.5s ease-in-out;
+}
+
+.contact input[type="submit"]:hover {
+  background: rgb(149, 79, 8);
+}
+
+.contact textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color-m);
+
+}
+
+.contact button {
+  margin: 1rem 0;
+}
+
+.contact-card {
+  padding-top: 50px;
+  text-align: center;
+}

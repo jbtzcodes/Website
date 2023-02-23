@@ -1,0 +1,35 @@
+.global-cont {
+  max-width: 1920px;
+  margin: 0 auto;
+ overflow-x: hidden;
+}
+
+
+
+video {
+  object-fit: cover;
+}
+
+.filter-video {
+  opacity: 0.5;
+}
+
+
+.card-prix {
+  min-height: 400px;
+}
+
+
+
+.img-para {
+  width: 100%;
+  height: 300px;
+  background: no-repeat center / cover url(./sources/img-para.jpg);
+  background-attachment: fixed;
+}
+
+footer {
+  height: 80px;
+}
+
+

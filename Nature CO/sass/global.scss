@@ -1,0 +1,185 @@
+@import "./variables";
+
+.ligne-global {
+  width: 1px;
+  background: $color-dark;
+  height: 100px;
+  margin: 1rem auto;
+}
+
+// ################################ Navigation
+
+nav a {
+  transition: color 0.2s ease-in;
+  font-size: 15px;
+  &::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 1px;
+    background: $color-dark;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease-in-out;
+}
+}
+nav li a:hover {
+  color: #000;
+}
+nav li a:hover::after {
+  width: 100%;
+}
+
+// ################################ Header
+
+.cont {
+  background: no-repeat center / cover url('https://images.unsplash.com/photo-1583701500778-62e47f7f8762?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+}
+
+.filtre {
+  background: radial-gradient(transparent, #000 80%);
+  opacity: 0.9;
+  h1 {
+    color: $color-dark;
+    text-transform: uppercase;
+    max-width: 800px;
+    background: $color-white;
+    font-size: calc(20px + 0.5vw - 5px);
+  } h1::after {
+        content: "";
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        min-width: 200px;
+        height: 300px;
+        border: 1px solid $color-white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: -1;
+      }
+  }
+
+
+.filtre::after, .filtre::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20%;
+  background: $color-white;
+  position: absolute;
+  transition: height 1s ease-in;
+  z-index: -1;
+}
+
+.filtre::after {
+  left: 5rem;
+  bottom: 0;
+}
+.filtre::before {
+  right: 5rem;
+  top: 0;
+}
+.filtre:hover::before,
+.filtre:hover::after {
+  height: 90%;
+}
+
+
+.link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  top: 69%;
+  border-radius: 50%;
+  background-color: $color-white;
+  line-height: 50px;
+  color: $color-dark;
+  box-shadow: 0 0 2px 0px rgba(255, 255, 255, .5);
+  transition: background 0.2s ease-in-out,
+    border 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+ &:hover {
+  color: $color-white;
+  border: 1px solid $color-white;
+  background: transparent;
+  box-shadow: 0 0 10px 0px rgba(255, 255, 255, .5);
+ }
+}
+
+@media screen and (max-width: 780px) {
+  .filtre::after {
+    display: none;
+  }
+
+  .filtre::before {
+    display: none;
+  }
+}
+
+
+// ################################ Section 1
+
+.section-1-img {
+filter:grayscale(100%);
+transition: filter 0.2s ease-in;
+}
+.section-1-img:hover {
+filter: none;
+}
+
+@media screen and (max-width: 780px) {
+.section-1-img {
+    filter: none;
+  }
+}
+
+
+// ################################ Para
+.parallax {
+  height: 300px;
+  background: no-repeat center / cover url('https://images.unsplash.com/photo-1567466296041-4bce9b4f94e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2052&q=80');
+  background-attachment: fixed;
+  
+}
+
+.cont-para {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(transparent, #000 80%);
+}
+
+
+// ################################ Cartes
+
+.card {
+  cursor: pointer;
+  transition: top 0.2s ease-in-out,
+  box-shadow 0.2s ease-in-out;
+}
+.card:hover {
+  top: -10px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+}
+.card img {
+  height: 200px!important;
+  width: 100%!important;
+  object-fit: cover!important; 
+}
+// ################################ Contact
+
+textarea {
+  height: 100px!important;
+}
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/functions.scss";
+@import "../node_modules/bootstrap/scss/variables.scss";
+@import "../node_modules/bootstrap/scss/utilities.scss";
+@import "../node_modules/bootstrap/scss/mixins.scss";

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap</title>
+  <!-- CDN boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<!-- Créer en CSS la classe global  -->
+<body class="global-cont h-100">
+
+<!-- Navigation -->
+<nav class="global-cont navbar fixed-top navbar-light bg-danger justify-content-center border-bottom shadow-sm">  
+      <a href="#" class="nav-link text-dark text-white">Home</a>
+      <a href="#" class="nav-link text-dark text-white">Produits</a>
+      <a href="#" class="nav-link text-dark text-white">Newsletter</a>
+      <a href="#" class="nav-link text-dark text-white">Contact</a>
+</nav>
+
+<!--  Home -->
+
+<div id="home" class="vw-100 vh-100 bg-dark position-relative ">
+
+<video class="position-absolute w-100 h-100" src="./sources/video-01.mp4" autoplay loop muted></video>
+<!-- rajouter classe CSS filter-video -->
+<div class="filter-video position-absolute w-100 h-100 bg-dark"></div>
+<div class="position-relative h-100 w-100 d-flex align-items-center justify-content-center flex-column pb-5">
+  <p class="fs-5 text-light mb-0">L'art de la cuisine</p>
+  <h1 class="display-1 fw-bolder text-white">L'atelier du goût</h1>
+  <p class="fs-5 text-light">Prennez goût aux bonnes choses</p>
+  <button class="btn btn-danger text-white">En savoir plus</button>
+</div>
+</div>
+
+
+
+<!-- section  1 -->
+
+<section class="container p-5">
+    <p class="fs-5 text-danger text-center ">Circuits courts</p>
+    <h2 class="text-center text-dark">Un point d'honneur !</h2>
+
+    <div class="row row-col row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center pt-3">
+      <div class="d-flex align-items-center">
+          <div class="row justify-content-center">
+            <img class="col-4" src="sources/icone.png" alt="">
+            <h3 class="text-danger text-center">Meilleur recette 2021</h3>
+            <p class="text-center text-light text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima eum alias unde veniam facere! Ipsa eligendi possimus dolorem quis facilis.</p>
+          </div>
+      </div>
+      <div class="d-flex align-items-center">
+          <div class="row justify-content-center">
+            <img class="col-4" src="sources/icone.png" alt="">
+            <h3 class="text-danger text-center">Médailler 2022</h3>
+            <p class="text-center text-light text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima eum alias unde veniam facere! Ipsa eligendi possimus dolorem quis facilis.</p>
+          </div>
+      </div>
+      <div class="d-flex align-items-center">
+          <div class="row justify-content-center">
+            <img class="col-4" src="sources/icone.png" alt="">
+            <h3 class="text-danger text-center">Bocus d'or</h3>
+            <p class="text-center text-light text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima eum alias unde veniam facere! Ipsa eligendi possimus dolorem quis facilis.</p>
+          </div>
+      </div>
+      
+    </div>
+    <hr>
+</section>
+
+
+<!-- Section 2 -->
+
+<section class="container">
+    <p class="fs-5 text-danger text-center ">100% satisfait ou remboursé</p>
+    <h2 class="text-center text-dark">Nos ateliers</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+      <div class="col d-flex align-items-center">
+        <div class="card mb-4 mt-5">
+          <img src="sources/img-1.jpg" alt="" class="card-img-top">
+         <div class="card-body">
+          <h4 class="card-title text-center ">Basique</h4>
+          <p class="card-text text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A delectus officia minus numquam eum hic, odio optio laborum quaerat aperiam recusandae deleniti animi saepe similique ut et alias nesciunt, iusto dolorem. Est ducimus iure quibusdam facilis eum voluptatem officiis quaerat?</p>
+          <a href="#" class="card-link  link-danger">En savoir plus</a>
+         </div>
+        </div>
+      </div>
+      <div class="col d-flex align-items-center">
+        <div class="card mb-4 bg-warning">
+          <img src="sources/img-2.jpg" alt="" class="card-img-top">
+         <div class="card-body">
+          <h4 class="card-title text-center">Medium</h4>
+          <p class="card-text text-center text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A delectus officia minus numquam eum hic, odio optio laborum quaerat aperiam recusandae deleniti animi saepe similique ut et alias nesciunt, iusto dolorem. Est ducimus iure quibusdam facilis eum voluptatem officiis quaerat?</p>
+          <a href="#" class="card-link  link-danger">En savoir plus</a>
+         </div>
+        </div>
+      </div>
+      <div class="col d-flex align-items-center">
+        <div class="card">
+          <img src="sources/img-3.jpg" alt="" class="card-img-top">
+         <div class="card-body">
+          <h4 class="card-title text-center">Expert</h4>
+          <p class="card-text text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A delectus officia minus numquam eum hic, odio optio laborum quaerat aperiam recusandae deleniti animi saepe similique ut et alias nesciunt, iusto dolorem. Est ducimus iure quibusdam facilis eum voluptatem officiis quaerat?</p>
+          <a href="#" class="card-link  link-danger">En savoir plus</a>
+         </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+</section>
+
+<!-- section 3 -->
+<section class="bg-dark py-6 mt-5 d-flex flex-column justify-content-center align-items-center">
+  <h4 class="display-5 text-white mt-5">Lorem, ipsum dolor.</h4>
+  <p class="fs4 text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. !</p>
+  <button class="btn btn-outline-warning my-5">Je me lance</button>
+
+</section>
+
+<!-- section 4 -->
+
+<section class="container my-4">
+  <p class="fs-5 text-danger text-center ">les meilleurs prix !</p>
+  <h2 class="text-center text-dark">Tarifs</h2>
+
+  <div class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3 p-md-5 p-0">
+
+    <!-- classe css -->
+    <div class="card-prix mb-4">
+      <div class="card bg-warning p-2 h-100">
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title display-5">Pack 1</h6>
+          <p class="m-0"><span class="fs-1">10€</span>/séance</p>
+          <ul class="mt-3 mb-5">
+            <li>✔️ Item</li>
+            <li>✔️ Item</li>
+            <li>✔️ Item</li>
+            <li>❌ Item</li>
+            <li>❌ Item</li>
+            <li>❌ Item</li>
+            <li>❌ Item</li>
+            <li>❌Item</li>
+          </ul>
+          <button class="btn btn-outline-danger w-100 p-2 mt-auto">Selectionner ce pack</button>
+        </div>
+      </div>
+    </div>
+
+<!-- carte 2 -->
+
+  <div class="card-prix mb-4">
+    <div class="card bg-warning p-2 h-100">
+      <div class="card-body d-flex flex-column">
+        <h6 class="card-title display-5">Pack 2</h6>
+        <p class="m-0"><span class="fs-1">50€</span>/séance</p>
+        <ul class="mt-3 mb-5">
+          <li>✔️ Item</li>
+          <li>✔️ Item</li>
+          <li>✔️ Item</li>
+          <li>✔️ Item</li>
+          <li>✔️ Item</li>
+          <li>✔️ Item</li>
+          <li>❌ Item</li>
+          <li>❌Item</li>
+        </ul>
+        <button class="btn btn-outline-danger w-100 p-2 mt-auto">Selectionner ce pack</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- carte 3 -->
+
+    <div class="card-prix mb-4">
+      <div class="card bg-warning p-2 h-100">
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title display-5">Pack 3</h6>
+          <p class="m-0"><span class="fs-1">100€</span>/séance</p>
+          <ul class="mt-3 mb-5">
+            <li>✔️ Item</li>
+            <li>✔️ Item</li>
+            <li>✔️ Item</li>
+            <li>✔️ Item</li>
+            <li>✔️ Item</li>
+            <li>✔️ Item</li>
+            <li>✔️ Item</li>
+            <li>✔️Item</li>
+          </ul>
+          <button class="btn btn-outline-danger w-100 p-2 mt-auto">Selectionner ce pack</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- Section 5 -->
+<!-- ajouter classe CSS -->
+<section class="img-para "></section>
+
+<!-- section 6 -->
+
+<section class="container mt-5">
+      <p class="fs-5 text-danger text-center ">restez à l'affût !</p>
+      <h2 class="text-center text-dark">Contactez-nous !</h2>
+  <form action="">
+    <div class="form-floating my-4">
+      <input type="text" class="form-control" id="nom" placeholder="Indiquez votre nom">
+      <label for="nom" class="form-label">Nom:</label>
+    </div>
+    <div class="form-floating my-4">
+      <input type="text" class="form-control" id="prenom" placeholder="Indiquez votre prenom">
+      <label for="prenom" class="form-label">Prénom:</label>
+    </div>
+    <div class="form-floating my-4">
+      <label for="mail" class="form-label">E-mail:</label>
+      <input type="mail" class="form-control" id="mail" placeholder="Indiquez votre e-mail">
+    </div>
+      <div class="form-floating my-4">
+        <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+        <label for="message" class="form-label">Message:</label>
+      </div>
+      <button class="btn btn-outline-danger mt-3">Envoyer votre message</button>
+  </form>
+</section>
+
+
+<!--  footer avec un peut de css -->
+
+<footer class="d-flex align-items-center justify-content-center bg-dark mt-5">
+  <p class="text-danger">&copy; Tout droit réservés - La minute de code - 2022 </p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
